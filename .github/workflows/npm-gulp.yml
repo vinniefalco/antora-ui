@@ -1,0 +1,43 @@
+name: NodeJS with Gulp
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build
+      run: |
+        npm install
+        gulp bundle
+        #cd build
+        #mkdir ui-bundle
+        #cd ui-bundle
+        #7z x ../ui-bundle.zip
+        #cd ../..
+
+    - name: Release Bundle
+      uses: svenstaro/upload-release-action@2.5.0
+      with:
+        tag: first
+        file: build/ui-bundle.zip
+        asset_name: ui-bundle.zip
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        overwrite: true
+        
