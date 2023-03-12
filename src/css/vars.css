@@ -54,6 +54,7 @@
   /* toc left */
   --nav-background: var(--color-cppa-med-blue);
   --nav-border-color: var(--color-white);
+  --nav-menu-toggle: var(--color-cppa-yellow);
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--color-cppa-off-white);
   --nav-muted-color: var(--color-cppa-off-white); /* right nav */
@@ -134,8 +135,7 @@
   --body-min-height: calc(100vh - var(--body-top));
   --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
   --nav-height--desktop: var(--body-min-height);
-  --nav-panel-menu-height: calc(100% - var(--drawer-height));
-  --nav-panel-explore-height: calc(50% + var(--drawer-height));
+  --nav-panel-menu-height: 100%;
   --nav-width: calc(270 / var(--rem-base) * 1rem);
   --toc-top: calc(var(--body-top) + var(--toolbar-height));
   --toc-height: calc(100vh - var(--toc-top) - 2.5rem);

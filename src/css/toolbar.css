@@ -18,6 +18,7 @@
 
 .nav-toggle {
   background: url(../img/menu.svg) no-repeat 50% 47.5%;
+  filter: invert();
   background-size: 49%;
   border: none;
   outline: none;
@@ -42,6 +43,7 @@
 .home-link {
   display: block;
   background: url(../img/home-o.svg) no-repeat center;
+  filter: invert();
   height: calc(var(--toolbar-height) / 2);
   width: calc(var(--toolbar-height) / 2);
   margin: calc(var(--toolbar-height) / 4);
