@@ -7,9 +7,13 @@ body {
 }
 
 .site-logo {
-  background: url(../img/boost_b.svg) no-repeat center;
-  border: none;
+  background: transparent url(../img/boost_b.svg) no-repeat center / 100% 100%;
   scale: 200%;
+  width: 1.1rem;
+  height: 1.1rem;
+  position: sticky;
+  top: 1.0075rem;
+  margin-right: 0.0rem;
 }
 
 .site-name {
@@ -43,6 +47,17 @@ body {
 
 .navbar-brand .navbar-item {
   color: var(--navbar-font-color);
+}
+
+.color-mode {
+  background: transparent url(../img/sun.svg) no-repeat center / 100% 100%;
+  filter: invert();
+  scale: 200%;
+  width: 1.1rem;
+  height: 1.1rem;
+  position: sticky;
+  top: 1.0075rem;
+  margin-right: 0.0rem;
 }
 
 #search-input {
