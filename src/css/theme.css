@@ -1,0 +1,36 @@
+#theme label {
+  display: none;
+}
+
+#theme {
+  display: block;
+  float: right;
+  margin: 13px 13px 0 0;
+}
+
+#theme input {
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  mask: no-repeat url("../img/icons.svg#view-sun") 50% 50% / 24px 24px;
+  scale: 75%;
+  mask-size: cover;
+  background-color: black;
+  border-radius: 25px;
+  outline: none;
+}
+
+.dark #theme input {
+  background-color: white;
+}
+
+#theme input:checked {
+  mask: no-repeat url("../img/icons.svg#view-moon") 50% 50% / 24px 24px;
+  scale: 100%;
+}
+
+#theme:hover input {
+  background-color: var(--color-cppa-yellow);
+}

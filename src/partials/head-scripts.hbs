@@ -3,3 +3,30 @@
     <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','{{this}}')</script>
     {{/with}}
     <script>var uiRootPath = '{{{uiRootPath}}}'</script>
+
+<script>
+
+function updateTheme() {
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+    document.getElementById("theme-button").checked = true;
+  } else {
+    document.documentElement.classList.remove('dark')
+    document.getElementById("theme-button").checked = false;
+  }
+};
+
+function onThemeButton() {
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    localStorage.theme = 'light';
+  } else {
+    localStorage.theme = 'dark';
+  }
+  updateTheme();
+}
+
+window.addEventListener('load', function() {
+    updateTheme();
+}, false);
+
+</script>

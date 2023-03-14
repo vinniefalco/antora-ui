@@ -1,5 +1,4 @@
 .doc {
-  color: var(--doc-font-color);
   font-size: var(--doc-font-size);
   hyphens: auto;
   line-height: var(--doc-line-height);
@@ -24,7 +23,7 @@
 .doc h4,
 .doc h5,
 .doc h6 {
-  color: var(--heading-font-color);
+  color: var(--color-cppa-yellow);
   font-weight: var(--heading-font-weight);
   hyphens: none;
   line-height: 1.3;
@@ -113,6 +112,7 @@
   margin: 0;
 }
 
+/*
 .doc a {
   color: var(--link-font-color);
 }
@@ -120,13 +120,14 @@
 .doc a:hover {
   color: var(--link_hover-font-color);
 }
+*/
 
 .doc a.bare {
   hyphens: none;
 }
 
 .doc a.unresolved {
-  color: var(--link_unresolved-font-color);
+  color: var(--color-debug);
 }
 
 .doc i.fa {
@@ -356,11 +357,15 @@
 
 .doc .admonitionblock td.content {
   padding: 1rem 1rem 0.75rem;
-  background: var(--admonition-background);
+  background: var(--color-smoke-90);
   width: 100%;
   word-wrap: anywhere;
 }
 
+.dark .doc .admonitionblock td.content {
+  color: white;
+  background: var(--color-cppa-med-blue);
+}
 .doc .admonitionblock .icon {
   position: absolute;
   top: 0;

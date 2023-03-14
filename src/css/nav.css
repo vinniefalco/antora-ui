@@ -29,10 +29,14 @@
 }
 
 .nav {
-  background: var(--nav-background);
+  background: var(--color-cppa-off-white);
   position: relative;
   top: var(--toolbar-height);
   height: var(--nav-height);
+}
+
+.dark .nav {
+  background: var(--color-cppa-med-blue);
 }
 
 @media screen and (min-width: 769px) {
@@ -48,10 +52,6 @@
     position: sticky;
     height: var(--nav-height--desktop);
   }
-}
-
-.nav a {
-  color: inherit;
 }
 
 .nav .panels {
@@ -92,7 +92,6 @@ html.is-clipped--nav {
 }
 
 .nav-menu h3.title {
-  color: var(--nav-heading-font-color);
   font-size: inherit;
   font-weight: var(--body-font-weight-bold);
   margin: 0;
@@ -100,8 +99,9 @@ html.is-clipped--nav {
 }
 
 .nav-menu-toggle {
-  background: transparent url(../img/octicons-24.svg#view-unfold) no-repeat center / 100% 100%;
-  filter: invert();
+  mask: url("../img/octicons-24.svg#view-unfold") no-repeat center / 100% 100%;
+  mask-size: cover;
+  background-color: black;
   border: none;
   outline: none;
   width: 0.9rem;
@@ -114,12 +114,16 @@ html.is-clipped--nav {
   visibility: hidden;
 }
 
+.dark .nav-menu-toggle {
+  background-color: white;
+}
+
 .nav-menu-toggle.is-active {
   background-image: url(../img/octicons-24.svg#view-fold);
 }
 
 .background-image {
-  color: var(--nav-menu-toggle);
+  color: var(--color-debug);
 }
 
 .nav-panel-menu.is-active:hover .nav-menu-toggle {
@@ -156,7 +160,10 @@ html.is-clipped--nav {
 }
 
 .nav-item-toggle {
-  background: transparent url(../img/caret.svg) no-repeat center / 50%;
+  mask: url("../img/caret.svg") no-repeat center / 50%;
+  mask-size: cover;
+  scale: 60%;
+  background-color: #888;
   border: none;
   outline: none;
   line-height: inherit;

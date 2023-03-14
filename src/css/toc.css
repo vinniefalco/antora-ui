@@ -1,5 +1,4 @@
 .toc-menu {
-  color: var(--toc-font-color);
 }
 
 .toc.sidebar .toc-menu {
@@ -9,7 +8,6 @@
 }
 
 .toc .toc-menu h3 {
-  color: var(--toc-heading-font-color);
   font-size: calc(16 / var(--rem-base) * 1rem);
   font-weight: var(--body-font-weight-bold);
   line-height: 1.3;
@@ -72,11 +70,14 @@
 }
 
 .toc .toc-menu a {
-  color: inherit;
-  border-left: 2px solid var(--toc-border-color);
+  border-left: 2px solid var(--color-cppa-off-white);
   display: inline-block;
   padding: 0.25rem 0 0.25rem 0.5rem;
   text-decoration: none;
+}
+
+.dark .toc .toc-menu a {
+  border-left: 2px solid var(--color-cppa-med-blue);
 }
 
 .sidebar.toc .toc-menu a {
@@ -85,16 +86,15 @@
 }
 
 .toc .toc-menu a:hover {
-  color: var(--link-font-color);
+  color: var(--color-cppa-yellow);
 }
 
 .toc .toc-menu a.is-active {
   border-left-color: var(--link-font-color);
-  color: var(--doc-font-color);
 }
 
-.sidebar.toc .toc-menu a:focus {
-  background: var(--panel-background);
+.sidebar.toc .toc-menu a:active {
+  text-decoration: underline;
 }
 
 .toc .toc-menu .is-hidden-toc {

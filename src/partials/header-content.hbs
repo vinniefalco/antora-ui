@@ -1,15 +1,8 @@
-<header class="header">
+<header>
   <nav class="navbar">
     <div class="navbar-brand">
       <button class="site-logo"></button>
       <a class="site-name" href="{{{or site.url siteRootPath}}}">Boost</a>
-      {{#if env.SITE_SEARCH_PROVIDER}}
-      <div class="navbar-item search hide-for-print">
-        <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs"{{#if page.home}} autofocus{{/if}}>
-        </div>
-      </div>
-      {{/if}}
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -23,6 +16,9 @@
         <a class="navbar-item" href="#">Community</a>
         <a class="navbar-item" href="#">Libraries</a>
         <a class="navbar-item" href="#">Releases</a>
+        <div id="theme">
+          <input type="checkbox" id="theme-button" onclick="onThemeButton()"/>
+        </div>
       </div>
     </div>
   </nav>

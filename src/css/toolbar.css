@@ -1,8 +1,7 @@
 .toolbar {
-  color: var(--toolbar-font-color);
   align-items: center;
-  background-color: var(--toolbar-background);
-  box-shadow: 0 1px 0 var(--toolbar-border-color);
+  background-color: var(--color-cppa-off-white);
+  /*box-shadow: 0 1px 0 var(--toolbar-border-color);*/
   display: flex;
   font-size: calc(15 / var(--rem-base) * 1rem);
   height: var(--toolbar-height);
@@ -12,8 +11,8 @@
   z-index: var(--z-index-toolbar);
 }
 
-.toolbar a {
-  color: inherit;
+.dark .toolbar {
+  background-color: var(--color-cppa-med-blue);
 }
 
 .nav-toggle {
@@ -41,12 +40,18 @@
 }
 
 .home-link {
+  mask: no-repeat center url("../img/home.svg");
+  mask-size: cover;
+  background-color: black;
+  scale: 150%;
   display: block;
-  background: url(../img/home-o.svg) no-repeat center;
-  filter: invert();
   height: calc(var(--toolbar-height) / 2);
   width: calc(var(--toolbar-height) / 2);
   margin: calc(var(--toolbar-height) / 4);
+}
+
+.dark .home-link {
+  background-color: white;
 }
 
 .home-link:hover,
@@ -63,8 +68,4 @@
   .edit-this-page {
     display: block;
   }
-}
-
-.toolbar .edit-this-page a {
-  color: var(--toolbar-muted-color);
 }
