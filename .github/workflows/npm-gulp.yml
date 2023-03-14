@@ -30,7 +30,7 @@ jobs:
     - name: Bundle
       uses: svenstaro/upload-release-action@2.5.0
       with:
-        tag: first
+        tag: antora-ui bundles
         file: build/ui-bundle.zip
         asset_name: ui-${{ github.ref_name }}.zip
         repo_token: ${{ secrets.GITHUB_TOKEN }}
