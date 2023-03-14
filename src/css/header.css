@@ -25,7 +25,7 @@ header {
   height: 1.1rem;
   position: sticky;
   top: 1.0075rem;
-  margin-right: 0.0rem;
+  margin-right: 0;
 }
 
 .dark .site-logo {
@@ -37,7 +37,7 @@ header {
   height: 1.1rem;
   position: sticky;
   top: 1.0075rem;
-  margin-right: 0.0rem;
+  margin-right: 0;
 }
 
 .site-name,
@@ -64,9 +64,6 @@ header {
 .navbar-brand {
   display: flex;
   padding-left: 1rem;
-}
-
-.navbar-brand .navbar-item {
 }
 
 .navbar-burger {
@@ -205,11 +202,6 @@ header {
 
   .navbar-menu:not(.is-active) {
     display: none;
-  }
-
-  .navbar-menu a.navbar-item:hover,
-  .navbar-menu .navbar-link:hover {
-    /*background: var(--navbar-menu_hover-background);*/
   }
 }
 

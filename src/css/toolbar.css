@@ -1,7 +1,6 @@
 .toolbar {
   align-items: center;
   background-color: var(--color-cppa-off-white);
-  /*box-shadow: 0 1px 0 var(--toolbar-border-color);*/
   display: flex;
   font-size: calc(15 / var(--rem-base) * 1rem);
   height: var(--toolbar-height);
