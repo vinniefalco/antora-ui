@@ -20,7 +20,7 @@ html {
 body {
   background-color: #fff;
   color: black;
-  font-family: var(--body-font-family);
+  font-family: 'Roboto', sans-serif;
   line-height: var(--body-line-height);
   margin: 0;
   tab-size: 4;
