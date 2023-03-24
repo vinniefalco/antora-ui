@@ -9,7 +9,7 @@
         <span></span>
       </button>
     </div>
-  {{#if (eq release-layout null)}}
+  {{#if (not page.attributes.is-release-layout)}}
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-tabs">
         <a class="navbar-item" href="#">News</a>
