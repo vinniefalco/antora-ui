@@ -18,34 +18,25 @@ html {
 }
 
 body {
-  background-color: #fff;
-  color: black;
-  font-family: 'Roboto', sans-serif;
+  background: var(--body-background);
+  color: var(--body-font-color);
+  font-family: var(--body-font-family);
   line-height: var(--body-line-height);
   margin: 0;
   tab-size: 4;
   word-wrap: anywhere; /* aka overflow-wrap; used when hyphens are disabled or aren't sufficient */
 }
 
-.dark body {
-  background-color: var(--color-cppa-dark-blue);
-  color: #fff;
-}
-
 a {
-  color: black;
-}
-
-.dark a {
-  color: white;
+  text-decoration: none;
 }
 
 a:hover {
-  color: var(--color-cppa-yellow);
+  text-decoration: underline;
 }
 
 a:active {
-  text-decoration: underline;
+  background-color: none;
 }
 
 code,
